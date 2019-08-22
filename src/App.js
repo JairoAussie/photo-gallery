@@ -55,7 +55,7 @@ export default class App extends Component {
     return (
       
       <div className="container">
-        <BrowserRouter>
+        <BrowserRouter basename="/photo-gallery">
         
           <SearchForm onSearch={this.performSearch} />
           <Nav />
