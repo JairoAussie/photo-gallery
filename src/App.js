@@ -3,7 +3,7 @@ import {
   Switch,
   Route,
   Redirect,
-  BrowserRouter
+  HashRouter
 } from 'react-router-dom';
 
 import './css/index.css';
@@ -55,7 +55,7 @@ export default class App extends Component {
     return (
       
       <div className="container">
-        <BrowserRouter basename="/photo-gallery">
+        <HashRouter>
         
           <SearchForm onSearch={this.performSearch} />
           <Nav />
@@ -72,7 +72,7 @@ export default class App extends Component {
             </Switch>  
             )   
           }
-        </BrowserRouter>
+        </HashRouter>
               
       </div>
     );
