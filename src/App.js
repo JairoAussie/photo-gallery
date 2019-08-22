@@ -56,13 +56,10 @@ export default class App extends Component {
       
       <div className="container">
         <BrowserRouter>
-        {// trying to display the loading message but it's not working
-          (this.state.loading)
-          ? <h1>Loading...</h1>
-          : <SearchForm onSearch={this.performSearch} />
-        }
+        
+          <SearchForm onSearch={this.performSearch} />
           <Nav />
-          { /*It will display a loading message if the data has been fetched */
+          { /*It will display a loading message if the data has been fetched, I can't get it for the search */
           this.state.loading ? <p>Loading...</p> : (
             //Only will route the first match, the index page redirects to /dogs
             <Switch>
